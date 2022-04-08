@@ -32,7 +32,7 @@ import kotlin.system.exitProcess
  * ```
  * Javalin.create {
  *     if (isDev) {
- *         it.registerPlugin(AutoShutdownPlugin(listOf("src/main")))
+ *         it.registerPlugin(AutoShutdownPlugin(listOf(Path.of("src", "main"))))
  *     }
  * }
  * ```
