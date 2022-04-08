@@ -1,0 +1,3 @@
+Editing this file will stop javalin but not re-run gradle build.
+This is because there is no gradle task that uses this file as input.
+See build.gradle.kts.
