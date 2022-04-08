@@ -12,4 +12,4 @@ Just run the following command to perform an automatic restart when you edit the
 Whether this works as expected depends on the gradle task and the filesystem implementation.
 For example, when executing a source under `/mnt/c` from WSL2, the expected event did not occur.
 
-See build.gradle.kts and plugin comments for details.
+See [build.gradle.kts](build.gradle.kts) and [plugin comments](src/main/kotlin/AutoShutdownPlugin.kt) for details.
