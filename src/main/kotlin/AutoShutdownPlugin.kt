@@ -90,13 +90,13 @@ private class FileWatcher(
         paths.forEach {
             addWatchDirectory(it)
         }
-        logger.debug("start file watching...")
+        logger.debug("Start watching...")
         while (true) {
-            polling()
+            watch()
         }
     }
 
-    private fun polling() {
+    private fun watch() {
         watchService.poll(300, TimeUnit.MILLISECONDS)?.let { key ->
             if (watchKeys.contains(key)) {
                 key.pollEvents().forEach { event ->
