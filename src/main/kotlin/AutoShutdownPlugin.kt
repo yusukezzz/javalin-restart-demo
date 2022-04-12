@@ -88,7 +88,11 @@ private class FileWatcher(
 
     override fun run() {
         paths.forEach {
-            addWatchDirectory(it)
+            try {
+                addWatchDirectory(it)
+            } catch (e: NoSuchFileException) {
+                logger.warn("Not found: $it")
+            }
         }
         logger.debug("Start watching...")
         while (true) {
